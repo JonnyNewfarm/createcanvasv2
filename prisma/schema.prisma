@@ -6,3 +6,10 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
+
+model Configuration {
+  id              String  @id @default(auto()) @map("_id") @db.ObjectId
+  width           Int
+  height          Int
+  croppedImageUrl String?
+}
