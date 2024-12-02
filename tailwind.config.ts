@@ -49,13 +49,24 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+			flashing: {
+				'0%, 100%' :{opacity: '0.2'},
+				'20%' : {opacity: "1"}
+				
+			}
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+
+		animation: {
+			"fade-in" : "fade-in 0.5s linear forwards",
+			flashing: "flashing 1.s infinite-linear"
+			
+		}
   	}
   },
   plugins: [require("tailwindcss-animate")],
