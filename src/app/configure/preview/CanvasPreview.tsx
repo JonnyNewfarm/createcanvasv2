@@ -13,11 +13,15 @@ import { useMutation } from "@tanstack/react-query";
 import { createCheckoutSession } from "./actions";
 import { useRouter } from "next/navigation";
 import { useToast } from "@/hooks/use-toast";
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
+import LoginModal from "@/components/LoginModal";
 
 const CanvasPreview = ({ configuration }: { configuration: Configuration }) => {
-  const { size } = configuration;
+  const { size, id } = configuration;
   const router = useRouter();
   const { toast } = useToast();
+  const { user } = useKindeBrowserClient();
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   let total = BASE_PRICE;
   if (size === "medium") {
@@ -50,12 +54,23 @@ const CanvasPreview = ({ configuration }: { configuration: Configuration }) => {
     },
   });
 
+  const handleCheckout = () => {
+    if (user) {
+      createSession({ configId: id });
+    } else {
+      localStorage.setItem("configurationId", id);
+      setIsLoginModalOpen(true);
+    }
+  };
+
   return (
     <>
       <div
         aria-hidden="true"
         className="pointer-events-none select-none absolute inset-0 overflow-hidden flex justify-center"
       ></div>
+
+      <LoginModal isOpen={isLoginModalOpen} setIsOpen={setIsLoginModalOpen} />
 
       <div className="mt-20 flex flex-col items-center md:grid text-sm sm:grid-cols-12 sm:grid-rows-1 sm:gap-x-6 md:gap-x-8 lg:gap-x-12">
         <div className="md:col-span-4 lg:col-span-3 md:row-span-2 md:row-end-2">
@@ -142,7 +157,7 @@ const CanvasPreview = ({ configuration }: { configuration: Configuration }) => {
             </div>
             <div className="mt-8 flex justify-end pb-12">
               <Button
-                onClick={() => createSession({ configId: configuration.id })}
+                onClick={() => handleCheckout()}
                 className="px-6 sm:px-8 lg:px-10"
               >
                 Check out

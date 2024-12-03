@@ -39,12 +39,10 @@ model Configuration {
 }
 
 model User {
-  id        String   @id @default(auto()) @map("_id") @db.ObjectId
-  userId    String?
-  email     String
-  order     Order[]
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id     String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId String?
+  email  String
+  order  Order[]
 }
 
 model Order {
