@@ -3,14 +3,8 @@ import { notFound } from "next/navigation";
 import React from "react";
 import CanvasPreview from "./CanvasPreview";
 
-interface PageProps {
-  searchParams: {
-    [key: string]: string | string[] | undefined;
-  };
-}
-
-const page = async ({ searchParams }: PageProps) => {
-  const { id } = await searchParams;
+const Page = async ({ params }: { params: Promise<{ id: string }> }) => {
+  const { id } = await params;
 
   if (!id || typeof id !== "string") {
     return notFound();
@@ -26,4 +20,4 @@ const page = async ({ searchParams }: PageProps) => {
   return <CanvasPreview configuration={configuration} />;
 };
 
-export default page;
+export default Page;
