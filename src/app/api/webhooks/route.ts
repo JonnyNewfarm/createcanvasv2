@@ -8,7 +8,7 @@ export async function POST(req: Request) {
 
     try{
 const body = await req.text()
-const signature = await (await headers()).get("stripe-signature")
+const signature = (await headers()).get("stripe-signature")
 
 if(!signature) {
     return new Response("invalid signature", {status: 400})
@@ -40,7 +40,7 @@ if(event.type === "checkout.session.completed") {
             isPaid: true,
             shippingAddress: {
                 create: {
-                    name: session.customer_details!.name!,
+                    
                     city: shippingAddress!.city!,
                     country: shippingAddress!.country!,
                     postalcode: shippingAddress!.postal_code!,

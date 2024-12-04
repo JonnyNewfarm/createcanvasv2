@@ -201,7 +201,7 @@ const DesignConfig = ({
               alt="your image"
               fill
               src={imageUrl}
-              className="pointer-events-none"
+              className="pointer-events-none object-contain"
             />
           </div>
         </Rnd>
