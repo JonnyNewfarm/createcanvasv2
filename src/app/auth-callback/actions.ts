@@ -13,13 +13,13 @@ export const getAuthStatus = async () => {
     }
 
     const existingUser = await db.user.findFirst({
-        where: {userId: user.id}
+        where: {id: user.id}
     })
 
     if(!existingUser) {
         await db.user.create({
             data:{
-                userId: user.id,
+                id: user.id,
                 email: user.email
 
             }

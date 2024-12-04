@@ -2,14 +2,10 @@ import { db } from "@/db";
 import { notFound } from "next/navigation";
 import React from "react";
 import CanvasPreview from "./CanvasPreview";
-interface PageProps {
-  searchParams: {
-    [key: string]: string | string[] | undefined;
-  };
-}
+type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
 
-const Page = async ({ searchParams }: PageProps) => {
-  const { id } = await searchParams;
+const Page = async (props: { searchParams: SearchParams }) => {
+  const { id } = await props.searchParams;
 
   if (!id || typeof id !== "string") {
     return notFound();

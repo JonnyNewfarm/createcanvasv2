@@ -2,14 +2,13 @@ import { db } from "@/db";
 import { notFound } from "next/navigation";
 import React from "react";
 import DesignConfig from "./DesignConfig";
-interface PageProps {
-  searchParams: {
-    [key: string]: string | string[] | undefined;
-  };
-}
 
-const Page = async ({ searchParams }: PageProps) => {
-  const { id } = searchParams;
+type SearchParams = Promise<{ [key: string]: string | string[] | undefined }>;
+
+const Page = async (props: { searchParams: SearchParams }) => {
+  const { id } = await props.searchParams;
+
+  console.log(id);
 
   if (!id || typeof id !== "string") {
     return notFound();
