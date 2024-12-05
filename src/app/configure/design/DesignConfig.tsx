@@ -69,7 +69,7 @@ const DesignConfig = ({
   });
 
   const [position, setPosition] = useState({
-    x: 150,
+    x: 205,
     y: 205,
   });
 
