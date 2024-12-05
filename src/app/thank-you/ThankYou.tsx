@@ -51,6 +51,12 @@ const ThankYou = () => {
             Your canvas is on the way
           </p>
         </div>
+        <div className="mt-12 text-md ">
+          <p className="text-stone-900 font-medium">Order id</p>
+          <p>{orderId}</p>
+        </div>
+
+        <div className="flex space-x-6 overflow-hidden mt-4 rounded-xl bg-stone-900/5 ring-1 ring-inset ring-stone-900/10 lg:rounded-2xl"></div>
       </div>
     </div>
   );
