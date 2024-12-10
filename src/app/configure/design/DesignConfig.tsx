@@ -128,7 +128,7 @@ const DesignConfig = ({
     }
   }
 
-  function base64ToBlob(base64: string, mimetype: string) {
+  function base64ToBlob(base64: string, mimeType: string) {
     const byteChars = atob(base64);
     const byteNumbers = new Array(byteChars.length);
     for (let i = 0; i < byteChars.length; i++) {
@@ -136,45 +136,44 @@ const DesignConfig = ({
     }
 
     const byteArray = new Uint8Array(byteNumbers);
-    return new Blob([byteArray], { type: mimetype });
+    return new Blob([byteArray], { type: mimeType });
   }
   return (
-    <div className="relative mt-20 grid grid-cols-1 lg:grid-cols-3  mb-20 pb-20">
+    <div className="relative mt-20 grid grid-cols-1 lg:grid-cols-3  mb-20 pb-20 border-2 border-red-900">
       <div
         ref={containerRef}
-        className="relative h-[37.5rem] overflow-hidden col-span-2 w-full flex max-w-4xl items-center justify-center rounded-lg border-2 border-dashed border-stone-300 p-12 text-center focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
+        className="relative h-[37.5rem] w-full overflow-hidden col-span-2 flex max-w-4xl items-center justify-center rounded-lg border-2  border-stone-300 p-12 text-center focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
       >
-        <div className="relative w-80 bg-opacity-50 pointer-events-none aspect-[13/13]">
-          <AspectRatio
-            ratio={13 / 13}
+        <div className="relative border-2 border-green-800 w-80 bg-opacity-50 pointer-events-none aspect-[13/13]">
+          <div
+            ref={canvasRef}
             className="pointer-events-none relative z-50 aspect-[13/13]  opacity-25 border-black border-[3px]"
           >
             <NextImage
               fill
               alt="canvas"
               src="/canvas.png"
-              className="pointer-events-none z-50 select-none border-2 border-black "
+              className="pointer-events-none z-50 select-none border-2 border-black"
             />
-          </AspectRatio>
+          </div>
           <div
             className="absolute z-40 inset-0 left-[3px] top-px 
           right-[3px] bottom-px  shadow-
           [0_0_0_99999px_rgba(229,231,235,0.6)]"
           />
           <div
-            ref={canvasRef}
             className={cn(
-              "absolute inset-0 left-[3px] top-px right-[3px] bottom-px",
+              "absolute inset-0 left-[3px] top-px right-[3px] bottom-px border-rose-600 border-[5px]",
               `bg-${options.color.tw}`
             )}
           />
         </div>
         <Rnd
           default={{
-            x: 150,
-            y: 205,
-            height: imageDimensions.height / 4,
-            width: imageDimensions.width / 4,
+            x: 170,
+            y: 100,
+            height: imageDimensions.height / 5,
+            width: imageDimensions.width / 5,
           }}
           className="absolute z-20 border-[3px] border-stone-800"
           lockAspectRatio
@@ -183,7 +182,6 @@ const DesignConfig = ({
               height: parseInt(ref.style.height),
               width: parseInt(ref.style.width),
             });
-            setPosition({ x, y });
           }}
           onDragStop={(_, data) => {
             const { x, y } = data;
