@@ -2,7 +2,12 @@ import React from "react";
 import Container from "./Container";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
+import {
+  getKindeServerSession,
+  LoginLink,
+  LogoutLink,
+  RegisterLink,
+} from "@kinde-oss/kinde-auth-nextjs/server";
 
 const Navbar = async () => {
   const { getUser } = getKindeServerSession();
@@ -21,13 +26,11 @@ const Navbar = async () => {
           <div className="h-full flex items-center space-x-4">
             {user ? (
               <>
-                <Link href={"/api/auth/logout"} className="">
-                  Sign out
-                </Link>
+                <LogoutLink className="">Sign out</LogoutLink>
                 {isAdmin ? (
-                  <Link href={"/api/auth/logout"} className="">
+                  <LogoutLink href={"/api/auth/logout"} className="">
                     Dashboard
-                  </Link>
+                  </LogoutLink>
                 ) : null}
 
                 <Link
@@ -40,11 +43,9 @@ const Navbar = async () => {
               </>
             ) : (
               <>
-                <Link href={"/api/auth/register"} className="">
-                  Sign up
-                </Link>
+                <RegisterLink className="">Sign up</RegisterLink>
 
-                <Link href={"/api/auth/login"}>Login</Link>
+                <LoginLink>Login</LoginLink>
 
                 <div className="h-8 w-px bg-zinc-200 hidden sm:block" />
 
