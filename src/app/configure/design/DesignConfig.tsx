@@ -24,13 +24,15 @@ import { BASE_PRICE } from "@/config/products";
 import { useUploadThing } from "@/lib/uploadthing";
 import { useToast } from "@/hooks/use-toast";
 import { useMutation } from "@tanstack/react-query";
-import { saveConfigArgs, saveConfig as _saveConfig } from "./actions";
+import { SaveConfigArgs, saveConfig as _saveConfig } from "./actions";
 import { useRouter } from "next/navigation";
+
 interface DesignConfigProps {
   configId: string;
   imageUrl: string;
   imageDimensions: { width: number; height: number };
 }
+
 const DesignConfig = ({
   configId,
   imageUrl,
@@ -38,9 +40,9 @@ const DesignConfig = ({
 }: DesignConfigProps) => {
   const { toast } = useToast();
   const router = useRouter();
-  const { mutate } = useMutation({
+  const { mutate, isPending } = useMutation({
     mutationKey: ["save-config"],
-    mutationFn: async (args: saveConfigArgs) => {
+    mutationFn: async (args: SaveConfigArgs) => {
       await Promise.all([saveConfig(), _saveConfig(args)]);
     },
     onError: () => {
@@ -69,7 +71,7 @@ const DesignConfig = ({
   });
 
   const [position, setPosition] = useState({
-    x: 205,
+    x: 105,
     y: 205,
   });
 
@@ -144,28 +146,24 @@ const DesignConfig = ({
         ref={containerRef}
         className="relative h-[37.5rem] w-full overflow-hidden col-span-2 flex max-w-4xl items-center justify-center rounded-lg border-2  border-stone-300 p-12 text-center focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
       >
-        <div className="relative border-2 border-green-800 w-80 bg-opacity-50 pointer-events-none aspect-[13/13]">
-          <div
+        <div
+          className={`relative w-80 bg-opacity-50 pointer-events-none aspect-[${options.model.label}]`}
+        >
+          <AspectRatio
+            ratio={options.model.ratio}
             ref={canvasRef}
-            className="pointer-events-none relative z-50 aspect-[13/13]  opacity-25 border-black border-[3px]"
+            className={`pointer-events-none relative z-50 aspect-[${options.model.label}] w-full h-full border-2 border-stone-800`}
           >
             <NextImage
+              src={"/canvas.png"}
+              alt=""
               fill
-              alt="canvas"
-              src="/canvas.png"
-              className="pointer-events-none z-50 select-none border-2 border-black"
+              className="pointer-events-none z-50 select-none"
             />
-          </div>
+          </AspectRatio>
           <div
             className="absolute z-40 inset-0 left-[3px] top-px 
-          right-[3px] bottom-px  shadow-
-          [0_0_0_99999px_rgba(229,231,235,0.6)]"
-          />
-          <div
-            className={cn(
-              "absolute inset-0 left-[3px] top-px right-[3px] bottom-px border-rose-600 border-[5px]",
-              `bg-${options.color.tw}`
-            )}
+          right-[3px] bottom-px  shadow-[0_0_0_99999px_rgba(229,231,235,0.6)]"
           />
         </div>
         <Rnd
@@ -316,6 +314,9 @@ const DesignConfig = ({
                 {formatPrice(BASE_PRICE / 100 + options.model.price / 100)}
               </p>
               <Button
+                isLoading={isPending}
+                disabled={isPending}
+                loadingText="Creating"
                 onClick={() =>
                   mutate({
                     configId,

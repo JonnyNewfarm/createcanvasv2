@@ -27,23 +27,26 @@ export const MODELS = {
       options: [
         {
         
-          label: "16x12",
+          label: "16/12",
           value: "medium",
           price: 6_00,
+          ratio: 16 / 12
 
       },
       {
-          label: "20x16",
+          label: "20/16",
           value: "large",
 
           price: 8_00,
+          ratio: 20 /16
 
       },
 
       {
-          label: "40x30",
+          label: "40/30",
           value: "xl",
           price: 10_00,
+          ratio: 40/30
 
       },
 

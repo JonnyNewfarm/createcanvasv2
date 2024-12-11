@@ -28,9 +28,9 @@ const Navbar = async () => {
               <>
                 <LogoutLink className="">Sign out</LogoutLink>
                 {isAdmin ? (
-                  <LogoutLink href={"/api/auth/logout"} className="">
+                  <Link href={"/admin"} className="">
                     Dashboard
-                  </LogoutLink>
+                  </Link>
                 ) : null}
 
                 <Link
