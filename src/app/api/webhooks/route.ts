@@ -13,7 +13,7 @@ const signature = (await headers()).get("stripe-signature")
 if(!signature) {
     return new Response("invalid signature", {status: 400})
 }
-const event = stripe.webhooks.constructEvent(body, signature, process.env.STRIPE_WEBHOOKS_SECRET!)
+const event = stripe.webhooks.constructEvent(body, signature, process.env.STRIPE_WEBHOOK_SECRET!)
 
 if(event.type === "checkout.session.completed") {
     if(!event.data.object.customer_details?.email){
