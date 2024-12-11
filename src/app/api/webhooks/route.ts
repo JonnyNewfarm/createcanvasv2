@@ -35,7 +35,9 @@ if(event.type === "checkout.session.completed") {
     const shippingAddress = session.shipping_details!.address
 
     await db.order.update({
-        where: {id:orderId},
+        where: {
+            id: orderId
+        },
          data:{
             isPaid: true,
             shippingAddress: {
@@ -66,7 +68,10 @@ if(event.type === "checkout.session.completed") {
 }
 
 return NextResponse.json({result: event, ok: true})
-    } catch{
+
+
+    } catch (err){
+        console.log(err)
 return NextResponse.json({message: "Something went wrong"}, {status: 500})
     }
     
