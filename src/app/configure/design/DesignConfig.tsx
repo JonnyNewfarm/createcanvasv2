@@ -158,7 +158,7 @@ const DesignConfig = ({
               src={"/canvas.png"}
               alt=""
               fill
-              className="pointer-events-none z-50 select-none"
+              className="pointer-events-none z-50 select-none opacity-20"
             />
           </AspectRatio>
           <div
