@@ -1,3 +1,4 @@
+import OurArtistsSection from "@/components/OurArtistsSection";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import Image from "next/image";
@@ -66,6 +67,8 @@ export default function Home() {
           <hr className="h-[1px] bg-stone-300 shadow-lg" />
         </div>
       </div>
+
+      <OurArtistsSection />
     </div>
   );
 }
