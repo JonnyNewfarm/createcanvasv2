@@ -148,7 +148,7 @@ function PaintingsGrid() {
 
 const PaintingsAnimation = () => {
   return (
-    <Container className="relative max-w-5xl">
+    <Container className="relative max-w-5xl grainy-dark">
       <div></div>
 
       <PaintingsGrid />

@@ -6,7 +6,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="bg-slate-50 grainy-light">
+    <div className="bg-[#f2f7f8]">
       <div className="flex flex-col sm:flex-row lg:mx-24 my-10 sm:my-36 xl:mx-52">
         <div className="flex flex-col text-center sm:text-left justify-center sm:justify-start sm:items-start items-center w-full z-10">
           <h1 className="font-bold text-7xl tracking-tight w-fit text-balance !leading-tight">
@@ -65,7 +65,6 @@ export default function Home() {
             <img src="/arrow.png" alt="arrow" className="w-20 z-10" />
           </div>
           <img className="object-contain" src="/heroImg.jpg" alt="canvas" />
-          <hr className="h-[1px] bg-stone-300 shadow-lg" />
         </div>
       </div>
 
