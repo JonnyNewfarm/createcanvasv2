@@ -1,13 +1,24 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Alegreya } from "next/font/google";
+import {
+  Alegreya,
+  Alegreya_Sans,
+  Aleo,
+  Arapey,
+  Cormorant,
+  Gelasio,
+  Lato,
+  Merriweather,
+  Montserrat,
+  Playfair_Display,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster";
 import Providers from "@/components/Providers";
 import { createMetadata } from "@/lib/utils";
 
-const inter = Alegreya({ subsets: ["latin"] });
+const inter = Playfair_Display({ subsets: ["latin"] });
 
 export const metadata = createMetadata();
 export default function RootLayout({
@@ -17,12 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={inter.className}
-        style={{ background: "#f2f7f8", overflowX: "hidden" }}
-      >
+      <body className={inter.className} style={{ overflowX: "hidden" }}>
         <Navbar />
-        <main className="flex flex-col min-h-[calc(100vh-3.5rem-1px)]">
+        <main className="flex flex-col min-h-[calc(100vh-3.5rem-1px)] grainy-light">
           <div className="flex-1 flex flex-col h-full">
             <Providers>{children}</Providers>
           </div>

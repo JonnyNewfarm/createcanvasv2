@@ -1,49 +1,60 @@
 import Link from "next/link";
 import React from "react";
+import Container from "./Container";
+import { Button } from "./ui/button";
 
 const OurArtistsSection = () => {
   return (
-    <div className="bg-stone-200/40 shadow-inner mb-20">
-      <div className="w-full text-center">
-        <h1 className="font-bold text-6xl pt-10">Our artists</h1>
-      </div>
+    <div className="bg-slate-50 grainy-dark pb-10 pt-10">
+      <Container>
+        <div className="w-full flex">
+          <div className="h-20 w-1 bg-stone-800 mr-2"></div>
+          <div>
+            <h1 className="text-5xl font-extrabold">Our Artists</h1>
+            <p className="font-semibold ml-1">Meet our painters</p>
+          </div>
+        </div>
+        <hr />
 
-      <div className="flex justify-center gap-x-60 mt-10 mb-10">
-        <div>
-          <div className="flex mb-10">
-            <img
-              className="max-w-72 rounded-xl relative"
-              src="/artist-one.jpeg"
-              alt=""
-            />
-            <div className="absolute ml-56 mt-14 text-center p-5 rounded-xl shadow-lg bg-white  w-52 h-44 ">
-              <h1 className="font-bold text-xl">Lena Voss</h1>
-              <p className="font-semibold text-stone-700">Painter</p>
-              <p>Lena Voss is a contemporary painter whose works..</p>
-              <Link href="" className="font-semibold underline">
+        <div className="mt-10 mb-20 relative z-0">
+          <div className=" flex flex-col sm:flex-row align-middle justify-end  sm:justify-between">
+            <div className="sm:w-60 rounded-xl">
+              <img
+                className="rounded-lg z-40 shadow-lg"
+                src="artist-one.jpeg"
+                alt=""
+              />
+              <Button className="w-full mt-3" variant={"outline"}>
                 Read more
-              </Link>
+              </Button>
+            </div>
+
+            <div className="sm:w-60 rounded-xl sm:mt-[40px]">
+              <img
+                className="rounded-lg z-40 shadow-xl"
+                src="artist-two.jpeg"
+                alt=""
+              />
+
+              <Button className="w-full mt-3" variant={"outline"}>
+                Read more
+              </Button>
+            </div>
+
+            <div className="sm:w-60 rounded-xl sm:mt-[90px]">
+              <img
+                className="rounded-lg z-40 shadow-xl"
+                src="artist-three.jpg"
+                alt=""
+              />
+
+              <Button className="w-full mt-3" variant={"outline"}>
+                Read more
+              </Button>
             </div>
           </div>
         </div>
-        <div>
-          <div className="flex">
-            <img
-              className="max-w-72 rounded-xl relative"
-              src="/artist-two.jpeg"
-              alt=""
-            />
-            <div className="absolute ml-56 mt-14  text-center p-5 rounded-xl shadow-lg bg-white  w-52 h-44 ">
-              <h1 className="font-bold text-xl">Sophie Armitage</h1>
-              <p className="font-semibold text-stone-700">Painter</p>
-              <p>Sophie Armitage is a contemporary painter whose works..</p>
-              <Link href="" className="font-semibold underline">
-                Read more
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
+      </Container>
     </div>
   );
 };

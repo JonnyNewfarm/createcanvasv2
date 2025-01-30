@@ -1,11 +1,12 @@
 import OurArtistsSection from "@/components/OurArtistsSection";
+import PaintingsAnimation from "@/components/PaintingsAnimation";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-slate-50 grainy-light">
       <div className="flex flex-col sm:flex-row lg:mx-24 my-10 sm:my-36 xl:mx-52">
         <div className="flex flex-col text-center sm:text-left justify-center sm:justify-start sm:items-start items-center w-full z-10">
           <h1 className="font-bold text-7xl tracking-tight w-fit text-balance !leading-tight">
@@ -67,6 +68,8 @@ export default function Home() {
           <hr className="h-[1px] bg-stone-300 shadow-lg" />
         </div>
       </div>
+
+      <PaintingsAnimation />
 
       <OurArtistsSection />
     </div>
