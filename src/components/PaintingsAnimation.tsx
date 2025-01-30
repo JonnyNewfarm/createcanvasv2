@@ -140,6 +140,8 @@ function PaintingsGrid() {
           />
         </>
       ) : null}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-slate-100 " />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-100 " />
     </div>
   );
 }
