@@ -64,7 +64,7 @@ export default function Home() {
             <img src="/yourimage.png" alt="text" className="w-[120px]" />
             <img src="/arrow.png" alt="arrow" className="w-20 z-10" />
           </div>
-          <img className="object-contain" src="/heroImg.jpg" alt="canvas" />
+          <img className="object-contain" src="/HeroImg.jpg" alt="canvas" />
         </div>
       </div>
 
