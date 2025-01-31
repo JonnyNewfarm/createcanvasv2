@@ -3,6 +3,7 @@ import PaintingsAnimation from "@/components/PaintingsAnimation";
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -47,12 +48,12 @@ export default function Home() {
             <hr className="shadow-lg w-full" />
           </div>
 
-          <Button
-            variant="outline"
-            className="text-lg border-[1px] mt-8 border-stone-900  rounded-xl py-5 px-10"
+          <Link
+            href={"/configure/upload"}
+            className="text-lg border-[1px] mt-8 border-stone-900  rounded-xl py-2 bg-white px-10"
           >
             Try it out
-          </Button>
+          </Link>
         </div>
 
         <div>
