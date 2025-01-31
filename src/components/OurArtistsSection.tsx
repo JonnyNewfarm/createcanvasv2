@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 const OurArtistsSection = () => {
   return (
-    <div className="bg-slate-50 grainy-dark pb-10 pt-10">
+    <div className="bg-slate-50 grainy-dark pb-10 pt-10 mt-20">
       <Container>
         <div className="w-full flex">
           <div className="h-20 w-1 bg-stone-800 mr-2"></div>
@@ -29,7 +29,7 @@ const OurArtistsSection = () => {
               </Button>
             </div>
 
-            <div className="sm:w-60 rounded-xl sm:mt-[40px]">
+            <div className="sm:w-60 rounded-xl">
               <img
                 className="rounded-lg z-40 shadow-xl"
                 src="artist-two.jpeg"
@@ -41,7 +41,7 @@ const OurArtistsSection = () => {
               </Button>
             </div>
 
-            <div className="sm:w-60 rounded-xl sm:mt-[90px]">
+            <div className="sm:w-60 rounded-xl ">
               <img
                 className="rounded-lg z-40 shadow-xl"
                 src="artist-three.jpg"

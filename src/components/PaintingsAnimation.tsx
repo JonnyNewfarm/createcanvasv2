@@ -149,7 +149,11 @@ function PaintingsGrid() {
 const PaintingsAnimation = () => {
   return (
     <Container className="relative max-w-5xl grainy-dark">
-      <div></div>
+      <img
+        aria-hidden="true"
+        src="/ourwork.png"
+        className="absolute select-none hidden xl:block -left-36 top-1/3"
+      />
 
       <PaintingsGrid />
     </Container>
