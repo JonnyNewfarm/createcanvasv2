@@ -70,7 +70,7 @@ export const createCheckoutSession = async ({configId}: {configId: string}) => {
 
     const product = await stripe.products.create({
         name: "Custom canvas",
-        images: [configuration.imageUrl],
+        images: [configuration.croppedImageUrl!],
         default_price_data: {
             currency: "USD",
             unit_amount: price,

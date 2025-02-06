@@ -40,6 +40,7 @@ const DesignConfig = ({
 }: DesignConfigProps) => {
   const { toast } = useToast();
   const router = useRouter();
+
   const { mutate, isPending } = useMutation({
     mutationKey: ["save-config"],
     mutationFn: async (args: SaveConfigArgs) => {
@@ -88,6 +89,7 @@ const DesignConfig = ({
         width,
         height,
       } = canvasRef.current!.getBoundingClientRect();
+
       const { left: containerLeft, top: containerTop } =
         containerRef.current!.getBoundingClientRect();
 
@@ -112,13 +114,14 @@ const DesignConfig = ({
         userImage,
         correctX,
         correctY,
-        dimension.height,
-        dimension.width
+        dimension.width,
+        dimension.height
       );
       const base64 = canvas.toDataURL();
       const base64Data = base64.split(",")[1];
       const blob = base64ToBlob(base64Data, "image/png");
-      const file = new File([blob], "file.png", { type: "image/png" });
+      const file = new File([blob], "filename.png", { type: "image/png" });
+
       await startUpload([file], { configId });
     } catch (err) {
       toast({
@@ -140,6 +143,7 @@ const DesignConfig = ({
     const byteArray = new Uint8Array(byteNumbers);
     return new Blob([byteArray], { type: mimeType });
   }
+
   return (
     <div className="relative mt-20 grid grid-cols-1 lg:grid-cols-3  mb-20 pb-20 border-2 border-red-900">
       <div

@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 const OurArtistsSection = () => {
   return (
-    <div className="bg-slate-50 grainy-dark pb-10 pt-10 mt-20">
+    <div className="bg-slate-200 grainy-dark pb-10 pt-10 mt-20">
       <Container>
         <div className="w-full flex">
           <div className="h-20 w-1 bg-stone-800 mr-2"></div>

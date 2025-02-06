@@ -50,7 +50,7 @@ const Page = () => {
   return (
     <div
       className={cn(
-        "relative h-full flex-1 my-16 w-full rounded-xl bg-stone-900/5 ring-1 ring-inset ring-stone-900/10 lg:rounded-2xl flex justify-center flex-col items-center",
+        "relative  h-full flex-1 my-16 w-full rounded-xl bg-stone-900/5 ring-1 grainy-light ring-inset ring-stone-900/10 lg:rounded-2xl flex justify-center flex-col items-center",
         {
           "ring-blue-900/25 bg-blue-900/10": dragOver,
         }

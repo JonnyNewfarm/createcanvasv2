@@ -50,6 +50,14 @@ export const MODELS = {
 
       },
 
+      {
+        label: "12/16",
+        value: "xl",
+        price: 10_00,
+        ratio: 12/16
+
+    },
+
 
       
     

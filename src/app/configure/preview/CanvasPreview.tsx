@@ -67,7 +67,7 @@ const CanvasPreview = ({ configuration }: { configuration: Configuration }) => {
     <>
       <div
         aria-hidden="true"
-        className="pointer-events-none select-none absolute inset-0 overflow-hidden flex justify-center"
+        className="pointer-events-none select-none absolute inset-0 overflow-hidden flex justify-center bg-grainy-dark"
       ></div>
 
       <LoginModal isOpen={isLoginModalOpen} setIsOpen={setIsLoginModalOpen} />
@@ -75,8 +75,8 @@ const CanvasPreview = ({ configuration }: { configuration: Configuration }) => {
       <div className="mt-20 flex flex-col items-center md:grid text-sm sm:grid-cols-12 sm:grid-rows-1 sm:gap-x-6 md:gap-x-8 lg:gap-x-12">
         <div className="md:col-span-4 lg:col-span-3 md:row-span-2 md:row-end-2">
           <img
-            className="w-96"
-            alt="sfs"
+            className="w-full rounded-md"
+            alt="your-image"
             src={configuration.croppedImageUrl!}
           />
         </div>
