@@ -34,13 +34,13 @@ export default function RootLayout({
         style={{ background: "#f2f7f8", overflowX: "hidden" }}
       >
         <Navbar />
-        <main className="flex flex-col min-h-[calc(100vh-3.5rem-1px overflow-x-hidden">
+        <main className="flex flex-col min-h-[calc(100vh-3.5rem-1px overflow-x-hidden min-h-[100vh]">
           <div className="flex-1 flex flex-col h-full overflow-x-hidden">
             <Providers>{children}</Providers>
           </div>
+          <Footer />
         </main>
 
-        <Footer />
         <Toaster />
       </body>
     </html>
