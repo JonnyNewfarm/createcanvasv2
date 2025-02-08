@@ -51,10 +51,9 @@ const Navbar = async () => {
 
                 <Link
                   href={"/configure/upload"}
-                  className="hidden sm:flex items-center gap-1 bg-zinc-800 text-white py-2 px-4 rounded-xl hover:opacity-90"
+                  className="flex items-center gap-1 bg-zinc-800 text-white py-2 px-4 rounded-xl hover:opacity-90"
                 >
-                  Create canvas
-                  <ArrowRight className="ml-1.5 h-5 w-5" />
+                  Upload image
                 </Link>
               </>
             )}
