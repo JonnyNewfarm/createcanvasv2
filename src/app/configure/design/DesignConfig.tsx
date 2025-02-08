@@ -9,7 +9,7 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
 import { RadioGroup } from "@headlessui/react";
-import { COLORS, MODELS } from "@/validators/optionValidator";
+import { MODELS } from "@/validators/optionValidator";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -59,10 +59,8 @@ const DesignConfig = ({
   });
 
   const [options, setOptions] = useState<{
-    color: (typeof COLORS)[number];
     model: (typeof MODELS.options)[number];
   }>({
-    color: COLORS[0],
     model: MODELS.options[0],
   });
 
@@ -145,7 +143,7 @@ const DesignConfig = ({
   }
 
   return (
-    <div className="relative mt-20 grid grid-cols-1 lg:grid-cols-3  mb-20 pb-20 border-2 border-red-900">
+    <div className="relative mt-20 grid grid-cols-1 lg:grid-cols-3  mb-20 pb-20 ">
       <div
         ref={containerRef}
         className="relative h-[37.5rem] w-full overflow-hidden col-span-2 flex max-w-4xl items-center justify-center rounded-lg border-2  border-stone-300 p-12 text-center focus:outline-none focus:ring-2 focus:ring-black focus:ring-offset-2"
@@ -167,7 +165,7 @@ const DesignConfig = ({
           </AspectRatio>
           <div
             className="absolute z-40 inset-0 left-[3px] top-px 
-          right-[3px] bottom-px  shadow-[0_0_0_99999px_rgba(229,231,235,0.6)]"
+          right-[3px] bottom-px  shadow-[0_0_0_99999px_rgba(226,231,235,0.6)]"
           />
         </div>
         <Rnd
@@ -221,43 +219,6 @@ const DesignConfig = ({
             <div className="w-full h-px bg-stone-200 my-6" />
             <div className="realtive mt-4 flex flex-col justify-between">
               <div className="flex flex-col gap-6">
-                <RadioGroup
-                  value={options.color}
-                  onChange={(val) => {
-                    setOptions((prev) => ({
-                      ...prev,
-                      color: val,
-                    }));
-                  }}
-                >
-                  <Label className="font-semibold">
-                    Color: {options.color.label}
-                  </Label>
-                  <div className="mt-3 flex items-center space-x-3">
-                    {COLORS.map((color) => (
-                      <RadioGroup.Option
-                        className={({ active, checked }) =>
-                          cn(
-                            "relative -m-0.5 flex cursor-pointer items-center justify-center rounded-full p-0.5 active:ring-0 focus:ring-0 active:outline-none focus:outline-none border-2 border-transparent",
-                            {
-                              [`border-${color.tw}`]: active || checked,
-                            }
-                          )
-                        }
-                        key={color.label}
-                        value={color}
-                      >
-                        <span
-                          className={cn(
-                            `bg-${color.tw}`,
-                            "h-8 w-8 rounded-full border border-stone-900 border-opacity-10"
-                          )}
-                        />
-                      </RadioGroup.Option>
-                    ))}
-                  </div>
-                </RadioGroup>
-
                 <div className="relative flex flex-col gap-3 w-full">
                   <Label className="font-semibold">Canvas size</Label>
                   <DropdownMenu>
@@ -324,7 +285,7 @@ const DesignConfig = ({
                 onClick={() =>
                   mutate({
                     configId,
-                    color: options.color.value,
+
                     size: options.model.value,
                   })
                 }

@@ -1,1 +1,1 @@
-export const BASE_PRICE = 14_00
+export const BASE_PRICE = 300_00
