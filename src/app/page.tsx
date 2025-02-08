@@ -68,8 +68,8 @@ export default function Home() {
               <img src="/down-arrow.jpg" alt="arrow" className="w-20 z-10" />
             </div>
             <img
-              className="object-contain"
-              src="/family-painting.jpg"
+              className="object-contain border-b-2"
+              src="/hero-shadow.jpg"
               alt="canvas"
             />
           </div>
