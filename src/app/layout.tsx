@@ -16,13 +16,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={inter.className}
-        style={{ background: "#f2f7f8", overflowX: "hidden" }}
-      >
+      <body className={inter.className} style={{ overflowX: "hidden" }}>
         <Navbar />
         <main className="flex flex-col min-h-[calc(100vh-3.5rem-1px overflow-x-hidden min-h-[100vh]">
-          <div className="flex-1 flex flex-col h-full overflow-x-hidden">
+          <div className="flex-1 flex flex-col grainy-dark h-full overflow-x-hidden">
             <Providers>{children}</Providers>
           </div>
           <Footer />

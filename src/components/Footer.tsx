@@ -3,7 +3,7 @@ import Container from "./Container";
 
 const Footer = () => {
   return (
-    <div className=" bg-white text-stone-800 py-10 px-10">
+    <div className=" text-stone-800 py-10 px-10 bg-white">
       <Container className="flex justify-between">
         <div>
           <h1 className="font-semibold">Created by Newfarm</h1>
