@@ -1,17 +1,4 @@
-import type { Metadata } from "next";
-import localFont from "next/font/local";
-import {
-  Alegreya,
-  Alegreya_Sans,
-  Aleo,
-  Arapey,
-  Cormorant,
-  Gelasio,
-  Lato,
-  Merriweather,
-  Montserrat,
-  Playfair_Display,
-} from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster";
