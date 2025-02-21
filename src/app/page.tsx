@@ -22,7 +22,7 @@ export default function Home() {
             </h1>
             <Link
               className="bg-stone-900 text-white text-xl py-3 px-5 rounded-xl"
-              href={"/upload"}
+              href={"/configure/upload"}
             >
               Upload image
             </Link>
