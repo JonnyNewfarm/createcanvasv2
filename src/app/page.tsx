@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <div className="xl:bg-[url('/painting9.jpg')] lg:bg-[url('/painting10.jpg')] md:bg-[url('/painting12.jpg')]  bg-[url('/painting8.jpg')]  relative  h-screen bg-cover">
         <div className="w-full h-full flex justify-center md:justify-start md:items-center lg:pl-20 md:pl-10">
-          <div className="lg:text-5xl lg:bg-white/0 p-10 rounded-xl text-center sm:text-left text-5xl [@media(max-width:395px)]:mt-0 [@media(max-width:395px)]:text-4xl [@media(min-width:376px)]:mt  mt-16 sm:text-6xl sm:mt-0  font-bold md:text-4xl xl:text-6xl">
+          <div className="lg:text-5xl lg:bg-white/0 p-10 rounded-xl [@media(max-width:767px)]:text-center text-center sm:text-left text-5xl [@media(max-width:395px)]:mt-0 [@media(max-width:510px)]:mt-3 [@media(max-width:395px)]:text-4xl [@media(min-width:376px)]:mt  mt-16 sm:text-6xl sm:mt-0  font-bold md:text-4xl xl:text-6xl">
             <h1>Get your image</h1>
             <h1 className="mb-1 md:mb-0">
               on a <span className="underline decoration-2">custom</span>{" "}
