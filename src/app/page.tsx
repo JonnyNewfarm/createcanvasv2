@@ -21,6 +21,29 @@ export default function Home() {
               on a <span>custom</span>{" "}
               <span className="md:block lg:inline-block">canvas</span>
             </h1>
+            <p className="text-lg hidden lg:block lg:pr-10 max-w-prose font-normal text-center lg:text-left text-balance md:text-wrap">
+              Capture your favorite memories with your own,{" "}
+            </p>
+            <p className="text-lg hidden lg:block font-normal lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
+              <span className="font-extrabold">one-of-one </span> canvas. Turn
+              your favorite image into
+            </p>
+            <p className="text-lg hidden lg:block font-normal lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
+              a painting in a few simple steps.
+            </p>
+            <div className="hidden md:block mb-2 text-lg font-semibold">
+              <p className="flex mt-5  font-semibold text-lg">
+                <Check className="mr-3" /> High quality canvas
+              </p>
+
+              <p className="flex font-semibold text-lg">
+                <Check className="mr-3" /> Highly detailed painting
+              </p>
+
+              <p className="flex font-semibold text-lg">
+                <Check className="mr-3" /> 4 year paint warranty
+              </p>
+            </div>
             <Link
               className="bg-stone-900 text-white text-lg md:text-lg lg:text-xl py-3 px-5 rounded-xl"
               href={"/configure/upload"}
