@@ -21,14 +21,14 @@ export default function Home() {
               on a <span className="underline decoration-2">custom</span>{" "}
               <span className="md:block lg:inline-block">canvas</span>
             </h1>
-            <p className="text-lg hidden lg:block lg:pr-10 max-w-prose font-normal text-center lg:text-left text-balance md:text-wrap">
+            <p className="text-lg tracking-tight hidden lg:block lg:pr-10 max-w-prose font-normal text-center lg:text-left text-balance md:text-wrap">
               Capture your favorite memories with your own,{" "}
             </p>
-            <p className="text-lg hidden lg:block font-normal lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
+            <p className="text-lg tracking-tight hidden lg:block font-normal lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
               <span className="font-extrabold">one-of-one </span> canvas. Turn
               your favorite image into
             </p>
-            <p className="text-lg hidden lg:block font-normal lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
+            <p className="text-lg tracking-tight hidden lg:block font-normal lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap">
               a painting in a few simple steps.
             </p>
             <div className="hidden md:block mb-2 text-lg font-semibold">
