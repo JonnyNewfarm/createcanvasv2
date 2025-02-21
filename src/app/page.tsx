@@ -15,7 +15,7 @@ export default function Home() {
     <>
       <div className="xl:bg-[url('/painting9.jpg')] lg:bg-[url('/painting10.jpg')] md:bg-[url('/painting12.jpg')]  bg-[url('/painting8.jpg')]  relative  h-screen bg-cover">
         <div className="w-full h-full flex justify-center md:justify-start md:items-center lg:pl-20 md:pl-10">
-          <div className="lg:text-5xl lg:bg-white/0 p-3 lg:p-10 rounded-lg  md:border-l-[2px] md:border-dashed border-black [@media(max-width:767px)]:text-center text-center sm:text-left text-5xl [@media(max-width:395px)]:mt-0 [@media(max-width:510px)]:mt-3 [@media(max-width:395px)]:text-4xl [@media(min-width:376px)]:mt  sm:mt-16 sm:text-6xl mt-6   font-extrabold md:text-4xl xl:text-6xl">
+          <div className="lg:text-5xl lg:bg-white/0 p-3 lg:p-10 rounded-lg  md:border-l-[2px] md:border-dashed border-black [@media(max-width:767px)]:text-center text-center sm:text-left text-6xl [@media(max-width:395px)]:mt-10 [@media(max-width:510px)]:mt-10 [@media(max-width:395px)]:text-5xl [@media(min-width:376px)]:mt  sm:mt-16 sm:text-6xl mt-6   font-extrabold md:text-4xl xl:text-6xl">
             <h1>Get your image</h1>
             <h1 className="mb-1 md:mb-0">
               on a <span className="underline decoration-2">custom</span>{" "}
@@ -45,7 +45,7 @@ export default function Home() {
               </p>
             </div>
             <Link
-              className="bg-stone-900 text-white text-lg md:text-lg lg:text-xl py-3 px-5 rounded-xl"
+              className="bg-stone-900 invisible md:visible text-white text-lg md:text-lg lg:text-xl py-3 px-5 rounded-xl"
               href={"/configure/upload"}
             >
               Upload image
