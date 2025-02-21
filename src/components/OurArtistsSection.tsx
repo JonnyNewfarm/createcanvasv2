@@ -20,35 +20,44 @@ const OurArtistsSection = () => {
           <div className=" flex flex-col sm:flex-row align-middle justify-end  sm:justify-between">
             <div className="sm:w-60 rounded-xl">
               <img
-                className="rounded-lg z-40 shadow-lg"
+                className="rounded-xl z-40 shadow-lg"
                 src="artist-one.jpeg"
                 alt=""
               />
-              <Button className="w-full mt-3" variant={"outline"}>
+              <Button
+                className="w-full mt-3 mb-2 rounded-xl bg-white"
+                variant={"outline"}
+              >
                 Read more
               </Button>
             </div>
 
             <div className="sm:w-60 rounded-xl">
               <img
-                className="rounded-lg z-40 shadow-xl"
+                className="rounded-xl z-40 shadow-xl"
                 src="artist-two.jpeg"
                 alt=""
               />
 
-              <Button className="w-full mt-3" variant={"outline"}>
+              <Button
+                className="w-full mb-2 mt-3 rounded-xl bg-white"
+                variant={"outline"}
+              >
                 Read more
               </Button>
             </div>
 
             <div className="sm:w-60 rounded-xl ">
               <img
-                className="rounded-lg z-40 shadow-xl"
+                className="rounded-xl z-40 shadow-xl"
                 src="artist-three.jpg"
                 alt=""
               />
 
-              <Button className="w-full mt-3" variant={"outline"}>
+              <Button
+                className="w-full mb-2 mt-3 rounded-xl bg-white"
+                variant={"outline"}
+              >
                 Read more
               </Button>
             </div>

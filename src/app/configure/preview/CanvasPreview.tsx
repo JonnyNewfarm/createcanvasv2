@@ -162,7 +162,7 @@ const CanvasPreview = ({ configuration }: { configuration: Configuration }) => {
             <div className="mt-8 flex justify-end pb-12">
               <Button
                 onClick={() => handleCheckout()}
-                className="px-6 sm:px-8 lg:px-10"
+                className="px-6 sm:px-8 lg:px-10 bg-stone-900 text-white rounded-xl hover:bg-stone-700"
               >
                 Check out
               </Button>

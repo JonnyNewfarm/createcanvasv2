@@ -52,11 +52,11 @@ const Page = () => {
       className={cn(
         "relative  h-full flex-1 my-16 w-full rounded-xl bg-stone-900/5 ring-1 grainy-light ring-inset ring-stone-900/10 lg:rounded-2xl flex justify-center flex-col items-center",
         {
-          "ring-blue-900/25 bg-blue-900/10": dragOver,
+          "ring-black-900/25 bg-black-900/10": dragOver,
         }
       )}
     >
-      <div className="relative flex flex-1 flex-col items-center justify-center w-full">
+      <div className="relative bg-stone-50 flex flex-1 flex-col items-center justify-center w-full">
         <Dropzone
           onDropRejected={onDropRejected}
           onDropAccepted={onDropAccepted}

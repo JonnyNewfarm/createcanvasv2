@@ -290,7 +290,7 @@ const DesignConfig = ({
                   })
                 }
                 size="sm"
-                className="w-full"
+                className="w-full bg-stone-900 rounded-xl text-white hover:bg-stone-700 "
               >
                 Continue
                 <ArrowRight className="h-4 w-4 ml-1.5 inline" />
