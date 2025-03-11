@@ -2,6 +2,7 @@ import OurArtistsSection from "@/components/OurArtistsSection";
 import PaintingsAnimation from "@/components/PaintingsAnimation";
 import ScrollContext from "@/hooks/ScrollerContext";
 import Link from "next/link";
+import ParallaxSection from "../components/ParallaxSection";
 
 export default function Home() {
   return (
@@ -25,6 +26,8 @@ export default function Home() {
           alt=""
         />
       </div>
+
+      <ParallaxSection />
 
       <div>
         <PaintingsAnimation />

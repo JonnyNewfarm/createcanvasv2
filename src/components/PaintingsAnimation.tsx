@@ -108,7 +108,7 @@ function PaintingsGrid() {
     <div
       ref={containerRef}
       className="relative -mx-4
-    mt-14 h-[720px] max-h-[150vh] grid grid-cols-1 items-start gap-7 overflow-hidden px-4 sm:mt-18 md:grid-cols-2 lg:grid-cols-3"
+    mt-20 h-[720px] max-h-[150vh] grid grid-cols-1 items-start gap-7 overflow-hidden px-4 sm:mt-18 md:grid-cols-2 lg:grid-cols-3"
     >
       {ContainerInView ? (
         <>
@@ -148,12 +148,10 @@ function PaintingsGrid() {
 
 const PaintingsAnimation = () => {
   return (
-    <Container className="relative max-w-5xl grainy-dark">
-      <img
-        aria-hidden="true"
-        src="/ourwork.png"
-        className="absolute select-none hidden xl:block -left-36 top-1/3"
-      />
+    <Container className="relative max-w-5xl grainy-dark mt-11">
+      <div className="w-full text-center text-6xl mt-10">
+        <h1>Some of our work</h1>
+      </div>
 
       <PaintingsGrid />
     </Container>
