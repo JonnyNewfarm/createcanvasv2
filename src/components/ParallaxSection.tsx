@@ -44,11 +44,18 @@ const Section2 = ({ scrollYProgress }: any) => {
   return (
     <motion.div
       style={{ scale, rotate }}
-      className="bg-stone-900 sticky top-0 h-[100vh] flex justify-center items-center align-middle"
+      className="grainy-dark  sticky top-0 h-[100vh]"
     >
-      <div className="text-white text-6xl">
-        <h1>Just upload your image</h1>
+      <div className="text-6xl top-1/2 left-40 text-center absolute">
+        <h1>We will</h1>
+        <h1 className="text-9xl">Paint it</h1>
+        <h1>for you</h1>
       </div>
+      <img
+        className="w-full  h-[100vh] object-cover"
+        src="/painting9.jpg"
+        alt=""
+      />
     </motion.div>
   );
 };

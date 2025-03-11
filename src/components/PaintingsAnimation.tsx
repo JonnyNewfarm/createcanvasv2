@@ -149,7 +149,7 @@ function PaintingsGrid() {
 const PaintingsAnimation = () => {
   return (
     <Container className="relative max-w-5xl grainy-dark mt-11">
-      <div className="w-full text-center text-6xl mt-10">
+      <div className="w-full text-center text-6xl mt-20">
         <h1>Some of our work</h1>
       </div>
 
