@@ -2,6 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Container from "./Container";
 import { Button } from "./ui/button";
+import { ArrowBigRight, ArrowRight } from "lucide-react";
 
 const OurArtistsSection = () => {
   return (
@@ -18,48 +19,43 @@ const OurArtistsSection = () => {
 
         <div className="mt-10 mb-20 relative z-0">
           <div className=" flex flex-col sm:flex-row align-middle justify-end  sm:justify-between">
-            <div className="sm:w-60 rounded-xl">
+            <div className="sm:w-80 mb-4">
               <img
-                className="rounded-xl z-40 shadow-lg"
+                className="rounded-lg z-40 shadow-lg"
                 src="artist-one.jpeg"
                 alt=""
               />
-              <Button
-                className="w-full mt-3 mb-2 rounded-xl bg-white"
-                variant={"outline"}
-              >
-                Read more
-              </Button>
+              <h1 className="font-semibold text-xl mt-1">Lena Voss</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h1 className="mt-2 flex gap-2 text-xl items-center">
+                Explore <ArrowRight />{" "}
+              </h1>
             </div>
 
-            <div className="sm:w-60 rounded-xl">
+            <div className="sm:w-80 rounded-xl mb-4">
               <img
-                className="rounded-xl z-40 shadow-xl"
+                className="rounded-lg z-40 shadow-xl"
                 src="artist-two.jpeg"
                 alt=""
               />
-
-              <Button
-                className="w-full mb-2 mt-3 rounded-xl bg-white"
-                variant={"outline"}
-              >
-                Read more
-              </Button>
+              <h1 className="font-semibold text-xl mt-1">Lena Voss</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h1 className="mt-2 flex gap-2 text-xl items-center">
+                Explore <ArrowRight />{" "}
+              </h1>
             </div>
 
-            <div className="sm:w-60 rounded-xl ">
+            <div className="sm:w-80 mb-4">
               <img
-                className="rounded-xl z-40 shadow-xl"
+                className="rounded-lg z-40 shadow-xl"
                 src="artist-three.jpg"
                 alt=""
               />
-
-              <Button
-                className="w-full mb-2 mt-3 rounded-xl bg-white"
-                variant={"outline"}
-              >
-                Read more
-              </Button>
+              <h1 className="font-semibold text-xl mt-1">Lena Voss</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              <h1 className="mt-2 flex gap-2 text-xl items-center">
+                Explore <ArrowRight />{" "}
+              </h1>
             </div>
           </div>
         </div>
