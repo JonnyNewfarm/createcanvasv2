@@ -1,13 +1,10 @@
 import type { NextConfig } from "next";
+const withVideos = require("next-videos");
 
 const nextConfig: NextConfig = {
   images: {
-    domains: ["utfs.io"]
-  }
+    domains: ["utfs.io"],
+  },
 };
 
-export default nextConfig;
-
-const withVideos = require('next-videos')
-
-module.exports = withVideos()
+module.exports = withVideos(nextConfig);
