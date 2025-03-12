@@ -10,7 +10,7 @@ const ParallaxSection = () => {
   });
 
   return (
-    <main ref={container} className="relative h-[200vh] bg-stone-900">
+    <main ref={container} className="relative h-[200vh] bg-stone-900/90">
       <Section1 scrollYProgress={scrollYProgress} />
       <Section2 scrollYProgress={scrollYProgress} />
     </main>
@@ -46,13 +46,13 @@ const Section2 = ({ scrollYProgress }: any) => {
       style={{ scale, rotate }}
       className="grainy-dark  sticky top-0 h-[100vh]"
     >
-      <div className="text-6xl top-1/2 left-40 text-center absolute">
+      <div className="text-6xl top-1/3 left-40 text-center absolute">
         <h1>We will</h1>
         <h1 className="text-9xl">Paint it</h1>
         <h1>for you</h1>
       </div>
       <img
-        className="w-full  h-[100vh] object-cover"
+        className="w-full h-[100vh] object-cover"
         src="/painting9.jpg"
         alt=""
       />

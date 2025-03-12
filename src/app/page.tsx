@@ -7,23 +7,30 @@ import ParallaxSection from "../components/ParallaxSection";
 export default function Home() {
   return (
     <ScrollContext>
-      <div className="relative">
-        <div className="absolute top-1/3 left-1/4 text-center -ml-36">
-          <h1 className="text-6xl">Get your</h1>
-          <h1 className="text-7xl font-semibold">favorite image</h1>
-          <h1 className="text-6xl mb-6">on a canvas</h1>
-          <Link
-            href={""}
-            className="text-2xl font-semibold bg-stone-900 rounded-xl text-white py-2 px-4"
-          >
-            Upload image
-          </Link>
+      <div className="relative h-screen">
+        <div className="flex justify-center align-middle items-center h-full">
+          <div style={{ zIndex: "2" }} className="text-center">
+            <h1
+              style={{ zIndex: "2" }}
+              className="text-5xl sm:text-6xl md:text-7xl lg:text-9xl uppercase text-nowrap  text-white font-bold"
+            >
+              Custom canvas
+            </h1>
+            <h1
+              style={{ zIndex: "2" }}
+              className="text-white text-2xl md:text-4xl"
+            >
+              From image to painting
+            </h1>
+          </div>
         </div>
-
-        <img
-          className="w-full h-[85vh] object-cover"
-          src="/painting9.jpg"
-          alt=""
+        <video
+          src={require("../../public/bg-vid.mp4")}
+          autoPlay
+          muted
+          loop
+          style={{ objectFit: "cover", zIndex: "1" }}
+          className="w-full h-full absolute top-0"
         />
       </div>
 

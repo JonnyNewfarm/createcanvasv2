@@ -27,7 +27,7 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-55%"]); // Fix: Ensure full range
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-85%"]); // Fix: Ensure full range
 
   return (
     <section ref={targetRef} className="relative h-[300vh] grainy-dark">
