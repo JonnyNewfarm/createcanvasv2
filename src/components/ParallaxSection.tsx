@@ -24,15 +24,24 @@ const Section1 = ({ scrollYProgress }: any) => {
   return (
     <motion.div
       style={{ scale, rotate }}
-      className="bg-white sticky  top-0 h-[100vh] flex  gap-x-20 items-center"
+      className="bg-white sticky overflow-hidden  top-0 h-[100vh]"
     >
-      <div className="text-5xl text-center absolute left-60">
-        <h1>Upload Your</h1>
-        <h1 className="text-9xl">Favorite</h1>
-        <h1>moment</h1>
+      <div className="w-full h-full md:items-center flex justify-center  mt-[150px] md:-mt-[150px] lg:mt-0">
+        <div
+          className="text-center text-4xl ml-0 lg:-ml-[350px]"
+          style={{ zIndex: "1" }}
+        >
+          <h1>Upload Your</h1>
+          <h1 className="text-8xl sm:text-9xl">Favorite</h1>
+          <h1>moment</h1>
+        </div>
       </div>
-      <div className="absolute bottom-0 right-60">
-        <img src="/Uten navn-1.jpg" className="w-[500px] " alt="" />
+      <div className="absolute bottom-0 md:right-[10px] lg:right-[60px] xl:right-[80px] ">
+        <img
+          src="/Uten navn-1.jpg"
+          className="w-[300px] md:w-[300px]  lg:w-[400px] sm:w-[300px] xl:w-[500px] "
+          alt=""
+        />
       </div>
     </motion.div>
   );
@@ -46,7 +55,7 @@ const Section2 = ({ scrollYProgress }: any) => {
       style={{ scale, rotate }}
       className="grainy-dark  sticky top-0 h-[100vh]"
     >
-      <div className="text-6xl top-1/3 left-40 text-center absolute">
+      <div className="sm:text-6xl top-1/3 sm:left-40 text-center absolute">
         <h1>We will</h1>
         <h1 className="text-9xl">Paint it</h1>
         <h1>for you</h1>

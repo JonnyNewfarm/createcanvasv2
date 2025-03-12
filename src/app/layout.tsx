@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Navbar />
         <main className="flex flex-col min-h-[calc(100vh-3.5rem-1px  min-h-[100vh]">
-          <div className="flex-1 flex flex-col grainy-dark h-full ">
+          <div className="flex-1 flex flex-col grainy-dark h-full overflow-clip">
             <Providers>{children}</Providers>
           </div>
           <Footer />
