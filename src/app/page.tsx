@@ -12,7 +12,7 @@ export default function Home() {
           <div style={{ zIndex: "2" }} className="text-center">
             <h1
               style={{ zIndex: "2" }}
-              className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase text-nowrap  text-white font-bold"
+              className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase text-nowrap  text-white font-bold"
             >
               Custom canvas
             </h1>

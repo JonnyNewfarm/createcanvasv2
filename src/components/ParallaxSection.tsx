@@ -26,7 +26,7 @@ const Section1 = ({ scrollYProgress }: any) => {
       style={{ scale, rotate }}
       className="bg-white sticky overflow-hidden  top-0 h-[100vh]"
     >
-      <div className="w-full h-full md:items-center flex justify-center  mt-[150px] md:-mt-[150px] lg:mt-0">
+      <div className="w-full h-full md:items-center flex justify-center  mt-[120px] md:-mt-[150px] lg:mt-0">
         <div
           className="text-center text-4xl ml-0 lg:-ml-[350px]"
           style={{ zIndex: "1" }}
