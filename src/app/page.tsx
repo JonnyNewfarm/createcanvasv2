@@ -3,6 +3,7 @@ import PaintingsAnimation from "@/components/PaintingsAnimation";
 import ScrollContext from "@/hooks/ScrollerContext";
 import Link from "next/link";
 import ParallaxSection from "../components/ParallaxSection";
+import ImgZoomOnScroll from "@/components/ImgZoomOnScroll";
 
 export default function Home() {
   return (
@@ -34,7 +35,7 @@ export default function Home() {
         />
       </div>
 
-      <ParallaxSection />
+      <ImgZoomOnScroll />
 
       <div>
         <PaintingsAnimation />

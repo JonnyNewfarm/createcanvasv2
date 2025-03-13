@@ -1,6 +1,7 @@
 "use client";
 import { motion, useScroll, useTransform } from "framer-motion";
 import React, { useRef } from "react";
+import ImgZoomOnScroll from "./ImgZoomOnScroll";
 
 const ParallaxSection = () => {
   const container = useRef<HTMLDivElement | null>(null);
@@ -24,25 +25,9 @@ const Section1 = ({ scrollYProgress }: any) => {
   return (
     <motion.div
       style={{ scale, rotate }}
-      className="bg-white sticky overflow-hidden  top-0 h-[100vh]"
+      className="grainy-dark sticky overflow-hidden  top-0 h-[100vh]"
     >
-      <div className="w-full h-full md:items-center flex justify-center  mt-[120px] md:-mt-[150px] lg:mt-0">
-        <div
-          className="text-center text-4xl ml-0 lg:-ml-[350px]"
-          style={{ zIndex: "1" }}
-        >
-          <h1>Upload Your</h1>
-          <h1 className="text-8xl sm:text-9xl">Favorite</h1>
-          <h1>moment</h1>
-        </div>
-      </div>
-      <div className="absolute bottom-0 md:right-[10px] lg:right-[60px] xl:right-[80px] ">
-        <img
-          src="/Uten navn-1.jpg"
-          className="w-[300px] md:w-[300px]  lg:w-[400px] sm:w-[300px] xl:w-[500px] "
-          alt=""
-        />
-      </div>
+      <ImgZoomOnScroll />
     </motion.div>
   );
 };
