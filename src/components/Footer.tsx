@@ -22,7 +22,7 @@ const Footer = () => {
             </div>
 
             <div>
-              <h1 className="text-3xl text-white/80">Socials</h1>
+              <h1 className="text-3xl text-white/60">Socials</h1>
               <h1 className="flex items-center gap-x-2">
                 Instagram <CiInstagram />{" "}
               </h1>
