@@ -30,7 +30,8 @@ const ImgZoomOnScroll = () => {
     {
       src: para1,
       scale: scale4,
-      style: "w-[25vw] h-[25vh] relative flex justify-center items-center",
+      style:
+        "w-[25vw] h-[25vh] relative flex justify-center items-center px-5 py-3",
       text1: "Upload your",
       text2: "favorite image",
       text3: "-We will paint it",
@@ -86,10 +87,12 @@ const ImgZoomOnScroll = () => {
               >
                 <div className={style}>
                   <Image className="object-cover" alt="image" fill src={src!} />
-                  <div className="absolute font-semibold text-center">
-                    <h1 className=" text-2xl  text-white">{text1}</h1>
-                    <h1 className="text-2xl text-white">{text2}</h1>
-                    <h1 className="text-sm text-white">{text3}</h1>
+                  <div className="absolute font-bold text-center">
+                    <h1 className="text-lg sm:text-2xl  text-white">{text1}</h1>
+                    <h1 className="text-leg sm:text-2xl text-white">{text2}</h1>
+                    <h1 className="text-[10px] sm:text-sm font-normal text-white">
+                      {text3}
+                    </h1>
                   </div>
                 </div>
               </motion.div>

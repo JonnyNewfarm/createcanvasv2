@@ -1,7 +1,7 @@
 "use client";
 import React, { HTMLAttributes, useEffect, useRef, useState } from "react";
 import Container from "./Container";
-import { useInView } from "framer-motion";
+import { useInView, motion, useScroll, useTransform } from "framer-motion";
 import { cn } from "@/lib/utils";
 
 const PAINTINGS = [
@@ -146,15 +146,87 @@ function PaintingsGrid() {
   );
 }
 
-const PaintingsAnimation = () => {
+interface ValueProps {
+  value: string;
+}
+
+const PaintingsAnimation = ({ value }: ValueProps) => {
+  const container = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: container,
+    offset: ["start 0.8", "start 0.40"],
+  });
+
+  const words = value.split(" ");
+
   return (
     <Container className="relative max-w-5xl grainy-dark mt-11">
-      <div className="w-full text-center text-6xl mt-20">
-        <h1>Some of our work</h1>
+      <div className="w-full text-center font-bold text-4xl sm:text-5xl  md:text-6xl mt-20">
+        <h1 ref={container}>
+          {words.map((word, i) => {
+            const start = i / words.length;
+            const end = start + 1 / words.length;
+            return (
+              <Word range={[start, end]} progress={scrollYProgress} key={i}>
+                {word}
+              </Word>
+            );
+          })}
+        </h1>
       </div>
 
       <PaintingsGrid />
     </Container>
+  );
+};
+
+const Word = ({
+  children,
+  range,
+  progress,
+}: {
+  children: string;
+  range: any;
+  progress: any;
+}) => {
+  const letters = children.split("");
+
+  const amount = range[1] - range[0];
+
+  const step = amount / children.length;
+
+  return (
+    <span className="relative text-nowrap mr-3">
+      {letters.map((letter, i) => {
+        const start = range[0] + step * i;
+        const end = range[0] + step * (i + 1);
+        return (
+          <span>
+            {" "}
+            <Letter range={[start, end]} progress={progress} key={i}>
+              {letter}
+            </Letter>
+          </span>
+        );
+      })}
+    </span>
+  );
+};
+
+const Letter = ({
+  children,
+  progress,
+  range,
+}: {
+  children: string;
+  progress: any;
+  range: any;
+}) => {
+  const opacity = useTransform(progress, range, [0, 1]);
+  return (
+    <motion.span className="relative -mr-[10px]" style={{ opacity }}>
+      {children}
+    </motion.span>
   );
 };
 
