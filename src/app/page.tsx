@@ -44,9 +44,7 @@ export default function Home() {
 
       <OurArtistsSection />
 
-      <div className="text-center text-6xl h-[300px]">
-        <ScrollText textSize="text-8xl" value="Upload now" />
-      </div>
+      <div className="h-[100px]"></div>
     </ScrollContext>
   );
 }

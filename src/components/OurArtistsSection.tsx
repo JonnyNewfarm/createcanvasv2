@@ -28,13 +28,10 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-85%"]); // Fix: Ensure full range
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-95%"]); // Fix: Ensure full range
 
   return (
-    <section
-      ref={targetRef}
-      className="relative h-[1100vh] sm:h-[300vh]  grainy-dark"
-    >
+    <section ref={targetRef} className="relative  sm:h-[300vh]  grainy-dark">
       <div className="absolute left-1/2  -translate-x-1/2 [@media(max-width:376px)]:mt-[8vh] mt-[16vh] sm:mt-[7vh]">
         <ScrollText value="Our Artists" />
       </div>
