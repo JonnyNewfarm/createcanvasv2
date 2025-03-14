@@ -6,7 +6,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const cards: CardType[] = [
-  { url: "/artist-one.jpeg", title: "Lena Whitford", id: 1 },
+  { url: "/artist.jpeg", title: "Lena Whitford", id: 1 },
   { url: "/artist-two.jpeg", title: "Maya Kensington", id: 2 },
   { url: "/artist-three.jpg", title: "Jacob Holloway", id: 3 },
   { url: "/artist-four.jpeg", title: "Elise Harrow", id: 4 },
