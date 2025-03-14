@@ -6,9 +6,15 @@ interface ValueProps {
   value: string;
   marginTop?: string;
   marginBottom?: string;
+  textSize?: string;
 }
 
-const ScrollText = ({ value, marginTop, marginBottom }: ValueProps) => {
+const ScrollText = ({
+  value,
+  marginTop,
+  marginBottom,
+  textSize,
+}: ValueProps) => {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
@@ -18,7 +24,7 @@ const ScrollText = ({ value, marginTop, marginBottom }: ValueProps) => {
   const words = value.split(" ");
   return (
     <div
-      className={`w-full text-center font-bold text-4xl sm:text-5xl  md:text-6xl mt-${marginTop} -mb-[${marginBottom}]`}
+      className={`w-full text-center font-bold text-4xl sm:text-5xl  md:${textSize} mt-${marginTop} -mb-[${marginBottom}]`}
     >
       <h1 ref={container}>
         {words.map((word, i) => {

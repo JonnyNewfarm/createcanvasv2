@@ -4,6 +4,7 @@ import ScrollContext from "@/hooks/ScrollerContext";
 import Link from "next/link";
 import ParallaxSection from "../components/ParallaxSection";
 import ImgZoomOnScroll from "@/components/ImgZoomOnScroll";
+import ScrollText from "@/components/ScrollText";
 
 export default function Home() {
   return (
@@ -42,6 +43,10 @@ export default function Home() {
       </div>
 
       <OurArtistsSection />
+
+      <div className="text-center text-6xl h-[300px]">
+        <ScrollText textSize="text-8xl" value="Upload now" />
+      </div>
     </ScrollContext>
   );
 }
