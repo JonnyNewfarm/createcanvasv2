@@ -50,7 +50,7 @@ const Page = () => {
   return (
     <div
       className={cn(
-        "relative  h-full flex-1 my-16 w-full rounded-xl bg-stone-900/5 ring-1 grainy-light ring-inset ring-stone-900/10 lg:rounded-2xl flex justify-center flex-col items-center",
+        "relative  h-[60vh] border-dotted border-black border-[1px] flex-1 my-16 w-full rounded-xl bg-stone-900/5 ring-1 grainy-light ring-inset ring-stone-900/10 lg:rounded-2xl flex justify-center flex-col items-center",
         {
           "ring-black-900/25 bg-black-900/10": dragOver,
         }
@@ -70,7 +70,7 @@ const Page = () => {
         >
           {({ getRootProps, getInputProps }) => (
             <div
-              className="h-full w-full flex-1 flex flex-col items-center justify-center"
+              className=" w-full flex-1 flex flex-col items-center justify-center"
               {...getRootProps()}
             >
               <input {...getInputProps()} />
