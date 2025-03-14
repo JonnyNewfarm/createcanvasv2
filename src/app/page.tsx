@@ -40,8 +40,9 @@ export default function Home() {
       <div>
         <PaintingsAnimation />
       </div>
-
-      <OurArtistsSection />
+      <div className="mb-16">
+        <OurArtistsSection />
+      </div>
     </ScrollContext>
   );
 }

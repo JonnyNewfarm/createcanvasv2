@@ -46,6 +46,7 @@ const HorizontalScrollCarousel = () => {
           ))}
         </motion.div>
       </div>
+      <div className="h-[200px]">asf</div>
     </section>
   );
 };
