@@ -32,7 +32,7 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className="relative h-[200vh] grainy-dark">
-      <div className="absolute left-1/2 -translate-x-1/2 mt-[15vh] sm:mt-[7vh]">
+      <div className="absolute left-1/2 -translate-x-1/2 mt-[12vh] sm:mt-[7vh]">
         <ScrollText value="Our Artists" />
       </div>
 

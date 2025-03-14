@@ -87,10 +87,10 @@ const ImgZoomOnScroll = () => {
               >
                 <div className={style}>
                   <Image className="object-cover" alt="image" fill src={src!} />
-                  <div className="absolute font-bold text-center">
+                  <div className="absolute left-1/2 -translate-x-1/2 font-bold text-center">
                     <h1 className="text-lg sm:text-2xl  text-white">{text1}</h1>
                     <h1 className="text-leg sm:text-2xl text-white">{text2}</h1>
-                    <h1 className="text-[10px] sm:text-sm font-normal text-white">
+                    <h1 className="text-[10px] text-nowrap mt-2 sm:text-sm font-normal text-white">
                       {text3}
                     </h1>
                   </div>
