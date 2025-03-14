@@ -44,7 +44,7 @@ export default function Home() {
 
       <OurArtistsSection />
 
-      <div className="h-[100px]"></div>
+      <div className="h-[500px]"></div>
     </ScrollContext>
   );
 }
