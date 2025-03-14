@@ -33,7 +33,7 @@ const HorizontalScrollCarousel = () => {
   return (
     <section
       ref={targetRef}
-      className="relative h-[900vh] sm:h-[300vh]  grainy-dark"
+      className="relative h-[1100vh] sm:h-[300vh]  grainy-dark"
     >
       <div className="absolute left-1/2  -translate-x-1/2 [@media(max-width:376px)]:mt-[8vh] mt-[16vh] sm:mt-[7vh]">
         <ScrollText value="Our Artists" />
@@ -46,7 +46,6 @@ const HorizontalScrollCarousel = () => {
           ))}
         </motion.div>
       </div>
-      <div className="h-[200px]">asf</div>
     </section>
   );
 };
