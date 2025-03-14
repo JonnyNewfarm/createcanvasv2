@@ -38,7 +38,7 @@ export default function Home() {
       <ImgZoomOnScroll />
 
       <div>
-        <PaintingsAnimation value="Some of our work" />
+        <PaintingsAnimation />
       </div>
 
       <OurArtistsSection />
