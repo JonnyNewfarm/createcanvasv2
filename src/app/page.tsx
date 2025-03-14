@@ -44,7 +44,7 @@ export default function Home() {
 
       <OurArtistsSection />
 
-      <div className="h-[500px]"></div>
+      <div className="[@media(max-width:450px)]:h-[500px] sm:h-1"></div>
     </ScrollContext>
   );
 }
