@@ -1,6 +1,6 @@
 "use client";
 import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import ScrollText from "./ScrollText";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -16,22 +16,45 @@ const cards: CardType[] = [
 
 const OurArtistsSection = () => {
   return (
-    <div className="grainy-dark sm:mt-40">
+    <div className="grainy-dark sm:mt-48">
       <HorizontalScrollCarousel />
     </div>
   );
 };
 
 const HorizontalScrollCarousel = () => {
-  const targetRef = useRef<HTMLDivElement | null>(null);
+  const containerRef = useRef(null);
+  const [dim, setDim] = useState("");
+  useEffect(() => {
+    const updateDim = () => {
+      const width = window.innerWidth;
+
+      if (width >= 1024) {
+        setDim("-50%");
+      } else if (width >= 768) {
+        setDim("-70%");
+      } else {
+        setDim("-90%");
+      }
+    };
+
+    updateDim();
+
+    window.addEventListener("resize", updateDim);
+
+    return () => {
+      window.removeEventListener("resize", updateDim);
+    };
+  }, []);
+
   const { scrollYProgress } = useScroll({
-    target: targetRef,
+    target: containerRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", dim]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh]  grainy-dark">
+    <section ref={containerRef} className="relative h-[200vh]  grainy-dark">
       <div className="absolute left-1/2  -translate-x-1/2 [@media(max-width:376px)]:mt-[8vh] mt-[16vh] sm:mt-[7vh]">
         <ScrollText value="Our Artists" />
       </div>
