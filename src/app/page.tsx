@@ -33,7 +33,7 @@ export default function Home() {
             <div className="">
               <Link
                 className="border-[3px] border-white hover:bg-white hover:text-stone-900 text-white py-2 px-4 text-lg"
-                style={{ zIndex: "2" }}
+                style={{ zIndex: "3" }}
                 href={"/configure/upload"}
               >
                 Try it out

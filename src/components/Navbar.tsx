@@ -50,7 +50,7 @@ const Navbar = async () => {
 
                 <Link
                   href={"/configure/upload"}
-                  className="flex items-center gap-1 bg-zinc-800 text-white py-2 px-4 rounded-xl hover:opacity-90"
+                  className="flex items-center gap-1 bg-zinc-800 text-white py-2 px-4 rounded-lg hover:opacity-90"
                 >
                   Upload image
                 </Link>
