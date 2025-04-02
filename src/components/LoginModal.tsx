@@ -19,9 +19,9 @@ const LoginModal = ({
 }) => {
   return (
     <Dialog onOpenChange={setIsOpen} open={isOpen}>
-      <DialogContent className="absolute z-[9999999999]">
+      <DialogContent className=" z-[9999999999] bg-white text-stone-900">
         <DialogHeader>
-          <div className="relative mx-auto w-24 h-24 mb-2">
+          <div className="relative mx-auto  w-24 h-24 mb-2">
             <Image
               src={"/step-1.png"}
               alt="step1"
@@ -29,7 +29,7 @@ const LoginModal = ({
               fill
             />
           </div>
-          <DialogTitle className="text-2xl text-center font-bold tracking-tight text-stone-900">
+          <DialogTitle className="text-2xl text-center font-bold tracking-tight ">
             Sign in to continue
           </DialogTitle>
           <DialogDescription className="text-base text-center py-2">
