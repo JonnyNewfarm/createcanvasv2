@@ -10,8 +10,6 @@ import para6 from "../../public/parallax-scroll/para6.jpg";
 import para7 from "../../public/parallax-scroll/para7.jpg";
 import Image from "next/image";
 import { useScroll, useTransform, motion } from "framer-motion";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 const ImgZoomOnScroll = () => {
   const container = useRef(null);
