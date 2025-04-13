@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import React, { useEffect, useRef } from "react";
 
@@ -14,48 +15,39 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <div className="relative h-screen">
-      <div className="flex justify-center  align-middle items-center h-full">
-        <div style={{ zIndex: "2" }} className="text-center uppercase">
-          <div
-            style={{ zIndex: "2" }}
-            className="absolute inset-0 w-full h-full bg-stone-800/10"
-          />
-          <h1
-            style={{ zIndex: "2" }}
-            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl uppercase text-nowrap  text-white font-bold"
-          >
-            Custom canvas
-          </h1>
-          <h1
-            style={{ zIndex: "2" }}
-            className="text-white text-2xl md:text-4xl mb-10"
-          >
-            From image to painting
-          </h1>
-          <div className="">
-            <Link
-              className="border-[3px] relative border-white hover:bg-white hover:text-stone-900 text-white py-2 px-4 text-xl"
-              style={{ zIndex: "5" }}
-              href={"/configure/upload"}
-            >
-              Try it out
-            </Link>
-          </div>
-          <div></div>
-        </div>
-      </div>
+    <div className="relative h-screen w-full overflow-hidden">
+      {/* Background video */}
       <video
         ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
-        style={{ objectFit: "cover", zIndex: "1" }}
-        className="w-full h-full absolute top-0"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
         <source src="/video.mp4" type="video/mp4" />
       </video>
+
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-stone-800/30 z-10" />
+
+      {/* Content */}
+      <div className="flex items-center mt-28 justify-center h-full relative z-20 text-center uppercase px-4">
+        <div>
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white font-bold">
+            Custom canvas
+          </h1>
+          <h2 className="text-white text-2xl md:text-4xl mb-10">
+            From image to painting
+          </h2>
+          <Link
+            href="/configure/upload"
+            className="border-[3px] border-white text-white hover:bg-white hover:text-stone-900 py-2 px-4 text-xl inline-block transition-colors"
+          >
+            Try it out
+          </Link>
+        </div>
+      </div>
     </div>
   );
 };
