@@ -89,10 +89,8 @@ const Card = ({ card }: { card: CardType }) => {
           className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
         ></div>
       </div>
-      <h1 className="text-3xl font-semibold">{card.title}</h1>
-      <h1 className="text-2xl gap-x-1  flex items-center">
-        <span>Read more</span> <ArrowRight />
-      </h1>
+      <h1 className="text-2xl mt-2">{card.title}</h1>
+      <h1 className="text-xl font-semibold">Read more</h1>
     </Link>
   );
 };
