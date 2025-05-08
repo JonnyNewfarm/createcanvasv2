@@ -86,7 +86,7 @@ function Painting({ imgScr, className, ...props }: PaintingProps) {
   return (
     <div
       className={cn(
-        "animate-fade-in rounded-md bg-white p-6 opacity-0 shadow-xl",
+        "animate-fade-in rounded-md bg-white/35 p-6 opacity-0 shadow-xl",
         className
       )}
       style={{ animationDelay }}
@@ -109,7 +109,7 @@ function PaintingsGrid() {
     <div
       ref={containerRef}
       className="relative -mx-4
-    mt-20 h-[720px] max-h-[150vh] grid grid-cols-1 items-start gap-7 overflow-hidden px-4 sm:mt-18 md:grid-cols-2 lg:grid-cols-3"
+    mt-10  h-[720px] max-h-[150vh] grid grid-cols-1 items-start gap-7 overflow-hidden px-10 sm:mt-18 md:grid-cols-2 lg:grid-cols-3"
     >
       {ContainerInView ? (
         <>
@@ -141,15 +141,15 @@ function PaintingsGrid() {
           />
         </>
       ) : null}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-slate-100 " />
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-slate-100 " />
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-stone-50/40 " />
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-stone-50/40" />
     </div>
   );
 }
 
 const PaintingsAnimation = () => {
   return (
-    <Container className="relative max-w-5xl grainy-dark mt-11">
+    <Container className="relative max-w-5xl grainy-dark mt-11 w-full flex flex-col justify-center sm:mb-20">
       <ScrollText value="Some of our work" marginTop="20" />
       <PaintingsGrid />
     </Container>

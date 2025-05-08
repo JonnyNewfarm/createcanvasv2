@@ -9,20 +9,20 @@ const Footer = () => {
   return (
     <div
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
-      className=" text-white relative h-[420px]    bg-stone-700"
+      className=" text-light relative h-[420px]"
     >
-      <div className="relative  h-[calc(100vh+420px)] -top-[100vh] bg-stone-700   flex-col justify-start">
+      <div className="relative  h-[calc(100vh+420px)] -top-[100vh] bg-[#333231]   flex-col justify-start">
         <div className="h-[420px] p-14 sticky top-[calc(100vh-420px)]">
           <div className="flex flex-row gap-x-11 text-xl">
             <div>
-              <h1 className="text-3xl text-white/60">About</h1>
+              <h1 className="sm:text-3xl text-lg text-white/60">About</h1>
               <h1>Home</h1>
               <h1>Contact</h1>
               <h1>Our artists</h1>
             </div>
 
             <div>
-              <h1 className="text-3xl text-white/60">Socials</h1>
+              <h1 className="sm:text-3xl text-lg text-white/60">Socials</h1>
               <h1 className="flex items-center gap-x-2">
                 Instagram <CiInstagram />{" "}
               </h1>
@@ -35,8 +35,10 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="mt-10 mb-10 text-left">
-            <h1 className="text-7xl lg:text-9xl  font-bold">Custom canvas</h1>
+          <div className="mt-20 mb-10 text-left flex flex-col gap-y-3">
+            <h1 className="text-3xl lg:text-7xl whitespace-nowrap  font-bold">
+              Custom canvas
+            </h1>
             <h1>Created by - Jonny Newfarm</h1>
           </div>
         </div>

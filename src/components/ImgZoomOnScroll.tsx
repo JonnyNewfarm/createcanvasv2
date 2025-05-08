@@ -30,9 +30,9 @@ const ImgZoomOnScroll = () => {
       scale: scale4,
       style:
         "w-[25vw] h-[25vh] relative flex justify-center items-center px-5 py-3",
-      text1: "Upload your",
-      text2: "favorite image",
-      text3: "-We will paint it",
+      text1: "Capture your",
+      text2: "favorite moment",
+      text3: "We will paint it",
       linkText: `Try it out`,
     },
     {
@@ -85,14 +85,14 @@ const ImgZoomOnScroll = () => {
               >
                 <div className={style}>
                   <Image className="object-cover" alt="image" fill src={src!} />
-                  <div className="absolute left-3 top-3 bg-stone-500/30  font-bold">
-                    <h1 className="text-md sm:text-2xl  text-white/90 leading-snug">
+                  <div className="absolute left-3 top-5 bg-stone-500/30  font-semibold">
+                    <h1 className="text-[10px] md:text-lg  text-white/90 leading-snug">
                       {text1}
                     </h1>
-                    <h1 className="text-md sm:text-2xl text-white/90 leading-snug">
+                    <h1 className=" text-[10px] md:text-lg  text-white/90 leading-snug">
                       {text2}
                     </h1>
-                    <h1 className="text-[10px] text-nowrap leading-snug m-0 sm:text-sm font-normal text-white">
+                    <h1 className="text-[5px] text-nowrap leading-snug m-0 sm:text-[7px] font-normal text-white">
                       {text3}
                     </h1>
                   </div>

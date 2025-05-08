@@ -34,7 +34,7 @@ const HeroSection = () => {
       {/* Content */}
       <div className="flex items-center mt-28 justify-center h-full relative z-20 text-center uppercase px-4">
         <div>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white font-bold">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white ">
             Custom canvas
           </h1>
           <h2 className="text-white text-2xl md:text-4xl mb-10">
@@ -42,7 +42,7 @@ const HeroSection = () => {
           </h2>
           <Link
             href="/configure/upload"
-            className="border-[3px] border-white text-white hover:bg-white hover:text-stone-900 py-2 px-4 text-xl inline-block transition-colors"
+            className="border-[3px] border-[#e6e4e3] text-light hover:bg-[#e6e4e3] hover:text-stone-900 py-2 px-4 text-xl inline-block transition-colors"
           >
             Try it out
           </Link>

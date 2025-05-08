@@ -216,7 +216,7 @@ const DesignConfig = ({
               Customize your canvas
             </h1>
 
-            <div className="w-full h-px bg-stone-200 my-6" />
+            <div className="w-full h-px bg-[#FCFBF4] my-6" />
             <div className="realtive mt-4 flex flex-col justify-between">
               <div className="flex flex-col gap-6">
                 <div className="relative flex flex-col gap-3 w-full">

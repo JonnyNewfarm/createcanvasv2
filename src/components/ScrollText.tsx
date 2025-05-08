@@ -24,7 +24,7 @@ const ScrollText = ({
   const words = value.split(" ");
   return (
     <div
-      className={`w-full text-stone-900/90 text-center font-bold text-4xl sm:text-5xl  md:${textSize} mt-${marginTop} -mb-[${marginBottom}]`}
+      className={`w-full text-[#333231] text-center font-bold text-3xl sm:text-5xl  md:${textSize} mt-${marginTop} -mb-[${marginBottom}]`}
     >
       <h1 ref={container}>
         {words.map((word, i) => {

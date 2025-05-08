@@ -1,4 +1,4 @@
-import { Playfair_Display } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster";
@@ -6,7 +6,7 @@ import Providers from "@/components/Providers";
 import { createMetadata } from "@/lib/utils";
 import Footer from "@/components/Footer";
 
-const inter = Playfair_Display({ subsets: ["latin"] });
+const inter = Montserrat({ subsets: ["latin"] });
 
 export const metadata = createMetadata();
 export default function RootLayout({

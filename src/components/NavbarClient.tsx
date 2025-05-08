@@ -42,13 +42,13 @@ const Navbar = ({ user, isAdmin }: NavbarProps) => {
       setPageStyling(
         `fixed ${
           navStyling
-            ? "grainy-dark text-stone-900"
-            : "bg-transparent text-white"
-        } top-0 z-30 w-full  transition-all text-sm sm:text-lg`
+            ? "grainy-dark text-[#333231]"
+            : "bg-transparent text-light"
+        } top-0 z-30 w-full  transition-all  sm:text-lg`
       );
     } else {
       setPageStyling(
-        "sticky top-0 w-full text-lg z-30 grainy-dark text-stone-900 transition-all backdrop-blur-lg"
+        "sticky top-0 w-full text-lg z-30 grainy-dark text-[#333231] transition-all backdrop-blur-lg"
       );
     }
   }, [pathname, navStyling]);
@@ -57,7 +57,7 @@ const Navbar = ({ user, isAdmin }: NavbarProps) => {
     <nav className={pageStyling}>
       <Container>
         <div className="flex items-center justify-between py-3">
-          <div className="flex items-center space-x-4 text-nowrap">
+          <div className="flex items-center space-x-4 text-nowrap text-xs sm:text-lg">
             {user ? (
               <>
                 <LogoutLink>Sign out</LogoutLink>
@@ -71,10 +71,10 @@ const Navbar = ({ user, isAdmin }: NavbarProps) => {
             )}
           </div>
 
-          <div className="text-center leading-none uppercase">
+          <div className="text-center  leading-none uppercase">
             <Link href={"/"}>
-              <h1 className="text-sm m-0 leading-none">Custom</h1>
-              <h1 className="font-bold m-0 text-2xl sm:text-4xl leading-none">
+              <h1 className="text-sm m-0  leading-none">Custom</h1>
+              <h1 className="font-bold m-0  text-lg sm:text-2xl leading-none">
                 Canvas
               </h1>
             </Link>
@@ -82,12 +82,12 @@ const Navbar = ({ user, isAdmin }: NavbarProps) => {
 
           <Link
             href="/configure/upload"
-            className={`flex items-center gap-1 text-white py-2 px-4 rounded-lg hover:opacity-90 ${
+            className={`flex items-center gap-1 text-xs sm:text-sm text-white py-2 px-3 rounded-lg hover:opacity-90 ${
               pathname === "/"
                 ? navStyling
-                  ? "bg-stone-900"
-                  : "bg-stone-700/30"
-                : "bg-stone-900"
+                  ? "bg-[#333231]"
+                  : "opacity-75"
+                : "bg-[#333231]"
             }`}
           >
             Upload image

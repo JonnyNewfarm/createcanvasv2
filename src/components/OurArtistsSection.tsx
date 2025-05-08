@@ -54,7 +54,10 @@ const HorizontalScrollCarousel = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["0%", dim]);
 
   return (
-    <section ref={containerRef} className="relative h-[200vh]  grainy-dark">
+    <section
+      ref={containerRef}
+      className="hidden md:block  h-[200vh]  grainy-dark"
+    >
       <div className="absolute left-1/2  -translate-x-1/2 [@media(max-width:376px)]:mt-[8vh] mt-[16vh] sm:mt-[7vh]">
         <ScrollText value="Our Artists" />
       </div>

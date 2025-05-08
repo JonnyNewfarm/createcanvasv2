@@ -19,7 +19,7 @@ const LoginModal = ({
 }) => {
   return (
     <Dialog onOpenChange={setIsOpen} open={isOpen}>
-      <DialogContent className=" z-[9999999999] bg-white text-stone-900">
+      <DialogContent className=" z-[9999999999] bg-[#FCFBF4] text-stone-900">
         <DialogHeader>
           <div className="relative mx-auto  w-24 h-24 mb-2">
             <Image

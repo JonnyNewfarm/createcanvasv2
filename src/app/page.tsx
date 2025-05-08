@@ -3,7 +3,7 @@ import PaintingsAnimation from "@/components/PaintingsAnimation";
 import ScrollContext from "@/hooks/ScrollerContext";
 import ImgZoomOnScroll from "@/components/ImgZoomOnScroll";
 import HeroSection from "@/components/HeroSection";
-import SaleTextAnimated from "@/components/SaleTextAnimated";
+import OurArtistsMobile from "@/components/OurAristsMobile";
 
 export default function Home() {
   return (
@@ -16,7 +16,7 @@ export default function Home() {
       </div>
 
       <OurArtistsSection />
-      <SaleTextAnimated />
+      <OurArtistsMobile />
     </ScrollContext>
   );
 }

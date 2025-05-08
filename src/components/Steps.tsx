@@ -25,7 +25,7 @@ const Steps = () => {
   const pathname = usePathname();
 
   return (
-    <ol className="rounded-md bg-stone-50 lg:flex lg:rounded-none lg:border-l lg:border-r lg:border-stone-200">
+    <ol className="rounded-md bg-white lg:flex lg:rounded-none lg:border-l lg:border-r lg:border-stone-200">
       {STEPS.map((step, i) => {
         const Current = pathname.endsWith(step.url);
         const Completed = STEPS.slice(i + 1).some((step) =>
@@ -38,10 +38,10 @@ const Steps = () => {
             <div>
               <span
                 className={cn(
-                  "absolute left-0 top-0 h-full w-1 bg-stone-50 lg:bottom-0 lg:top-auto lg:h-1 lg:w-full",
+                  "absolute left-0 top-0 h-full w-1 bg-white lg:bottom-0 lg:top-auto lg:h-1 lg:w-full",
                   {
                     "bg-stone-700": Current,
-                    "bg-stone-100": Completed,
+                    "bg-[#FCFBF4]": Completed,
                   }
                 )}
                 aria-hidden="true"
