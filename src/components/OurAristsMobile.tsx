@@ -37,13 +37,10 @@ const OurArtistsMobile = () => {
                     />
                   </div>
                 </div>
-                <div className="w-full px-10">
-                  <div className="p-5 w-full border-b-1 border-b-white">
-                    <h1>{project.title}</h1>
-                  </div>
-                  <div className=" p-5 flex justify-between text-sm">
-                    <h1>{project.title}</h1>
-                    <h1>Read more</h1>
+                <div className="w-full px-5">
+                  <div className="p-5 w-full border-b-1">
+                    <h1 className="">{project.title}</h1>
+                    <h1 className="font-semibold">Read more</h1>
                   </div>
                 </div>
               </div>
