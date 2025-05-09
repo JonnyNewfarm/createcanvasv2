@@ -3,6 +3,16 @@
 @tailwind utilities;
 
 
+
+
+html, body {
+  scrollbar-width: none; 
+  -ms-overflow-style: none;  
+  cursor: wait;
+  
+}
+
+
 body {
   overscroll-behavior: none;
 }
@@ -13,6 +23,8 @@ body {
 .text-light {
   color: #e6e4e3
 }
+
+
 
 
 .grainy-dark {
