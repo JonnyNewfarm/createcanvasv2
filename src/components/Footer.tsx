@@ -11,18 +11,18 @@ const Footer = () => {
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}
       className=" text-light relative h-[420px]"
     >
-      <div className="relative  h-[calc(100vh+420px)] -top-[100vh] bg-[#333231]   flex-col justify-start">
+      <div className="relative text-[#333231]  h-[calc(100vh+420px)] -top-[100vh] grainy-dark   flex-col justify-start">
         <div className="h-[420px] p-14 sticky top-[calc(100vh-420px)]">
           <div className="flex flex-row gap-x-11 text-xl">
             <div>
-              <h1 className="sm:text-3xl text-lg text-white/60">About</h1>
+              <h1 className="sm:text-3xl text-lg ">About</h1>
               <h1>Home</h1>
               <h1>Contact</h1>
               <h1>Our artists</h1>
             </div>
 
             <div>
-              <h1 className="sm:text-3xl text-lg text-white/60">Socials</h1>
+              <h1 className="sm:text-3xl text-lg">Socials</h1>
               <h1 className="flex items-center gap-x-2">
                 Instagram <CiInstagram />{" "}
               </h1>
