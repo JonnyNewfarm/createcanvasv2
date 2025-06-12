@@ -16,7 +16,6 @@ const HeroSection = () => {
 
   return (
     <div className="relative h-screen w-full overflow-hidden">
-      {/* Background video */}
       <video
         ref={videoRef}
         autoPlay
@@ -25,16 +24,14 @@ const HeroSection = () => {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover z-0"
       >
-        <source src="/video.mp4" type="video/mp4" />
+        <source src="/video1.mp4" type="video/mp4" />
       </video>
 
-      {/* Overlay */}
       <div className="absolute inset-0 bg-stone-800/30 z-10" />
 
-      {/* Content */}
       <div className="flex items-center mt-28 justify-center h-full relative z-20 text-center uppercase px-4">
         <div>
-          <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl text-white ">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl  text-white ">
             Custom canvas
           </h1>
           <h2 className="text-white text-2xl md:text-4xl mb-10">

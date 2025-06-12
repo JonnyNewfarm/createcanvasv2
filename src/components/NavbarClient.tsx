@@ -73,8 +73,7 @@ const Navbar = ({ user, isAdmin }: NavbarProps) => {
 
           <div className="text-center  leading-none uppercase">
             <Link href={"/"}>
-              <h1 className="text-sm m-0  leading-none">Custom</h1>
-              <h1 className="font-bold m-0  text-lg sm:text-2xl leading-none">
+              <h1 className="font-bold m-0  text-xl sm:text-3xl leading-none">
                 Canvas
               </h1>
             </Link>
@@ -82,13 +81,7 @@ const Navbar = ({ user, isAdmin }: NavbarProps) => {
 
           <Link
             href="/configure/upload"
-            className={`flex items-center gap-1 text-xs sm:text-sm text-white py-2 px-3 rounded-lg hover:opacity-90 ${
-              pathname === "/"
-                ? navStyling
-                  ? "bg-[#333231]"
-                  : "opacity-75"
-                : "bg-[#333231]"
-            }`}
+            className="flex items-center gap-1 text-xs sm:text-lg  py-2 px-3  hover:opacity-90"
           >
             Upload image
           </Link>
