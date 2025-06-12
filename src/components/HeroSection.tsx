@@ -34,7 +34,7 @@ const HeroSection = () => {
           <h1 className="text-4xl sm:text-6xl md:text-7xl  text-white ">
             Custom canvas
           </h1>
-          <h2 className="text-white text-2xl md:text-4xl mb-10">
+          <h2 className="text-white text-xl md:text-4xl mb-10">
             From image to painting
           </h2>
           <Link
